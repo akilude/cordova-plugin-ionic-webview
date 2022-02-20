@@ -120,4 +120,20 @@
     [rootController presentViewController:alert animated:YES completion:nil];
 }
 
+
+// Added code to automatically accept media permission requests for webview. Now for iOS 15 and above, camera and microphone permissions need to be accepted once instead of each time on startup
+#ifdef __IPHONE_15_0
+
+- (void) webView:(WKWebView *)webView
+requestMediaCapturePermissionForOrigin:(WKSecurityOrigin *)origin
+initiatedByFrame:(WKFrameInfo *)frame
+type:(WKMediaCaptureType)type
+decisionHandler:(void (^)(WKPermissionDecision))decisionHandler
+API_AVAILABLE(ios(15.0)){
+    decisionHandler(WKPermissionDecisionGrant);
+}
+
+
+#endif
+
 @end

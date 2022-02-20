@@ -23,6 +23,10 @@
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&identifier=104773211)](https://dependabot.com)
 [![npm](https://img.shields.io/npm/v/cordova-plugin-ionic-webview.svg)](https://www.npmjs.com/package/cordova-plugin-ionic-webview)
 
+
+# Changes
+Added code to automatically accept media permission requests for webview. Now for iOS 15 and above, camera and microphone permissions need to be accepted once instead of each time on startup
+
 # Ionic Web View for Cordova
 
 A Web View plugin for Cordova, focused on providing the highest performance experience for Ionic apps (but can be used with any Cordova app).
